@@ -8,6 +8,10 @@ A browser-based patient management app using React and PGlite.
 
 
 
+Demo: https://patient-system-alpha.vercel.app/
+
+
+
 
 Features:
 
@@ -49,7 +53,7 @@ npm run dev
 Open http://localhost:5173 in your browser
 
 
-Demo: https://patient-system-alpha.vercel.app/
+
 
 
 
@@ -84,8 +88,8 @@ Technologies:
 
 
 
-![image](https://github.com/user-attachments/assets/bbd52bd5-f63c-4bef-90d2-418de022311e)
-React
+
+>React
 
 >TypeScript
 
