@@ -1,7 +1,10 @@
-MedBlocks Patient management system
+                    MEDBLOCKS - Patient-management-system
 
 
 A browser-based patient management app using React and PGlite.
+
+
+
 
 
 
@@ -18,11 +21,19 @@ Features:
 
 
 
+
+
+
+
 Setup:
 
 
 Clone the repo: https://github.com/dilbarM/Patient_system.git
 cd Patient_system
+
+
+
+
 
 
 
@@ -43,7 +54,13 @@ Demo: https://patient-system-alpha.vercel.app/
 
 
 
+
+
+
+
+
 How It Works:
+
 
 
 >The database runs inside a Web Worker using PGlite, storing data in IndexedDB.
@@ -57,7 +74,13 @@ How It Works:
 
 
 
+
+
+
+
 Technologies:
+
+
 
 
 >React
