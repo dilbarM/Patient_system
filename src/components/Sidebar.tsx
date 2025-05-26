@@ -14,7 +14,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
         onClose();
       }
     }
-    window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [open, onClose]);
 
@@ -31,15 +31,12 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
 
   return (
     <>
-      {/* Overlay for mobile only */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden transition-opacity duration-300 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         onClick={onClose}
-        aria-hidden={!open}
+         aria-hidden={!open}
       />
-
-      {/* Sidebar for mobile */}
       <aside
         aria-label="Sidebar"
         className={`fixed top-0 left-0 bottom-0 w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 md:hidden ${open ? 'translate-x-0' : '-translate-x-full'
@@ -75,8 +72,6 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
           ))}
         </nav>
       </aside>
-
-      {/* Sidebar for desktop */}
       <aside
         aria-label="Sidebar"
         className="hidden md:flex md:flex-shrink-0"
