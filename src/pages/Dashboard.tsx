@@ -27,7 +27,7 @@ const Dashboard: React.FC = () => {
             <Card.Body>
               <Card.Title>View & query patients</Card.Title>
               <Card.Text>
-                Use sql query to search and view patient data efficiently
+                Use sql queries to search and view patient data efficiently
               </Card.Text>
             </Card.Body>
           </Card>
