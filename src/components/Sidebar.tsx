@@ -9,12 +9,11 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
   useEffect(() => {
-    const handleResize = () => {
+    function handleResize() {
       if (window.innerWidth >= 768 && open) {
         onClose();
       }
-    };
-
+    }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [open, onClose]);
