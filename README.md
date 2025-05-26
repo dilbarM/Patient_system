@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8c99bff3-be7f-423f-92af-de471be3f481)
+
 MEDBLOCKS - Patient-management-system
 
 
@@ -84,7 +84,8 @@ Technologies:
 
 
 
->React
+![image](https://github.com/user-attachments/assets/bbd52bd5-f63c-4bef-90d2-418de022311e)
+React
 
 >TypeScript
 
