@@ -37,3 +37,10 @@ npm install
 
 # 3. Start the development server
 npm run dev
+
+
+
+## 🧩 Technologies
+- React, Vite, TypeScript
+- PGlite (PostgreSQL in WebAssembly)
+- React Router, Lucide Icons
