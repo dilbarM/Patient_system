@@ -177,7 +177,6 @@ const PatientQuery: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {!queryResult.success ? (
               <div className="bg-error-50 border-l-4 border-error-600 p-4">
                 <div className="text-error-700 font-semibold">Error:</div>
