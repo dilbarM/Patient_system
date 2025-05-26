@@ -43,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
           }`}
       >
         <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
-          <h1 className="text-2xl font-extrabold text-primary-800 tracking-tight">Medblocks</h1>
+          <h1 className="text-2xl font-extrabold text-primary-800 tracking-tight">s</h1>
           <button
             onClick={onClose}
             aria-label="Close sidebar"
@@ -78,7 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
       >
         <div className="flex flex-col w-64 bg-white border-r border-gray-200 shadow-md">
           <div className="flex items-center h-16 px-6 border-b border-gray-200">
-            <h1 className="text-2xl font-extrabold text-primary-800 tracking-tight">MedicalBlocks</h1>
+            <h1 className="text-2xl font-extrabold text-primary-800 tracking-tight">MedBlocks</h1>
           </div>
 
           <nav
