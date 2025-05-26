@@ -23,22 +23,13 @@ const initSchema = async (database: PGliteWorker) => {
   await database.query(`
     CREATE INDEX IF NOT EXISTS idx_patient_name ON patients (last_name, first_name);
   `);
-
-  console.log("Database schema initialized");
 };
 
 export const initDatabase = async (): Promise<PGliteWorker> => {
   if (!db) {
-    try {
-      const workerInstance = new Worker(new URL('/pglite-worker.js', import.meta.url), {
-        type: 'module',
-      });
-      db = new PGliteWorker(workerInstance);
-      await initSchema(db);
-    } catch (error) {
-      console.error("Failed to initialize database:", error);
-      throw error;
-    }
+    const worker = new Worker(new URL('/pglite-worker.js', import.meta.url), { type: 'module' });
+    db = new PGliteWorker(worker);
+    await initSchema(db);
   }
   return db;
 };
@@ -69,12 +60,12 @@ export const registerPatient = async (patientData: any): Promise<any> => {
       last_name,
       date_of_birth,
       gender,
-      email || null,
-      phone || null,
-      address || null,
-      medical_notes || null,
-      insurance_provider || null,
-      insurance_id || null,
+      email ?? null,
+      phone ?? null,
+      address ?? null,
+      medical_notes ?? null,
+      insurance_provider ?? null,
+      insurance_id ?? null,
     ]
   );
 
@@ -83,33 +74,23 @@ export const registerPatient = async (patientData: any): Promise<any> => {
 
 export const getAllPatients = async (): Promise<any[]> => {
   const database = await initDatabase();
-  try {
-    const result = await database.query(
-      "SELECT * FROM patients ORDER BY last_name, first_name"
-    );
-    return result.rows || [];
-  } catch (error) {
-    console.error('Error executing getAllPatients query:', error);
-    throw error;
-  }
+  const result = await database.query(
+    "SELECT * FROM patients ORDER BY last_name, first_name"
+  );
+  return result.rows || [];
 };
 
 export const searchPatientsByName = async (
   searchTerm: string
 ): Promise<any[]> => {
   const database = await initDatabase();
-   try {
-    const result = await database.query(
-      `SELECT * FROM patients
-       WHERE first_name ILIKE $1 OR last_name ILIKE $2
-       ORDER BY last_name, first_name`,
-      [`%${searchTerm}%`, `%${searchTerm}%`]
-    );
-    return result.rows || [];
-   } catch (error) {
-      console.error('Error executing searchPatientsByName query:', error);
-      throw error;
-   }
+  const result = await database.query(
+    `SELECT * FROM patients
+     WHERE first_name ILIKE $1 OR last_name ILIKE $2
+     ORDER BY last_name, first_name`,
+    [`%${searchTerm}%`, `%${searchTerm}%`]
+  );
+  return result.rows || [];
 };
 
 export const executeQuery = async (
@@ -121,7 +102,6 @@ export const executeQuery = async (
     const result = await database.query(sqlQuery, params);
     return { success: true, data: result.rows || [], error: null };
   } catch (error: any) {
-    console.error("Query execution error:", error);
     return {
       success: false,
       data: [],
@@ -132,13 +112,5 @@ export const executeQuery = async (
 
 export const deletePatient = async (id: number): Promise<void> => {
   const database = await initDatabase();
-  try {
-    await database.query(
-      `DELETE FROM patients WHERE id = $1`,
-      [id]
-    );
-  } catch (error) {
-    console.error(`Error deleting patient with id ${id}:`, error);
-    throw error;
-  }
+  await database.query(`DELETE FROM patients WHERE id = $1`, [id]);
 };

@@ -6,6 +6,7 @@ import Sidebar from './Sidebar';
 const Layout: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
+  
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar onMenuClick={() => setSidebarOpen(true)} />
