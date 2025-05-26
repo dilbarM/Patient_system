@@ -27,8 +27,7 @@ export const DatabaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         setIsInitialized(true);
         setError(null);
       } catch (err) {
-        console.error('failed to initialize database:', err);
-        setError('failed to initialize database. Please refresh the page and try again.');
+        setError('Failed to initialize database. Please refresh and try again.');
       } finally {
         setIsLoading(false);
       }
