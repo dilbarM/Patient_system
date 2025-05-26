@@ -25,6 +25,9 @@
 
 ---
 
+
+
+
 ## ⚙️ Setup
 
 ```bash
@@ -40,7 +43,18 @@ npm run dev
 
 
 
+
+
+
 ## 🧩 Technologies
 - React, Vite, TypeScript
 - PGlite (PostgreSQL in WebAssembly)
 - React Router, Lucide Icons
+
+
+
+
+
+
+
+
