@@ -60,8 +60,7 @@ const PatientRegistration: React.FC = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded shadow">
-      <h1 className="text-xl font-semibold mb-4">Register New Patient</h1>
-
+      <h1 className="text-xl font-semibold mb-4">Register new Patient</h1>
       {success && <div className="mb-4 text-green-600">Patient registered successfully!</div>}
 
       <form onSubmit={handleSubmit} className="grid gap-4 grid-cols-1 sm:grid-cols-2">
@@ -132,7 +131,7 @@ const PatientRegistration: React.FC = () => {
         </div>
 
         <div className="sm:col-span-2">
-          <label className="block text-sm font-medium mb-1" htmlFor="medical_notes">Medical Notes</label>
+          <label className="block text-sm font-medium mb-1" htmlFor="medical_notes">Medical notes</label>
           <textarea
             id="medical_notes"
             name="medical_notes"
