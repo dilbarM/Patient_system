@@ -19,7 +19,7 @@ A patient management app using React + PGlite. Runs entirely in the browser and 
 
 ## 🛠️ Setup
 ```bash
-git clone https://github.com/your-username/patient-app.git
-cd patient-app
+git clone https://github.com/dilbarM/Patient_system.git
+cd Patient_system
 npm install
 npm run dev
