@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
               <Link to="/" className="flex items-center">
                 <Hospital className="h-8 w-8 text-primary-600" />
                 <span className="ml-2 text-xl font-bold text-primary-800">
-                  MedicalBlocks
+                  
                 </span>
               </Link>
             </div>
