@@ -1,9 +1,9 @@
-# 🩺 MedicalBlocks Patient Registration App
+# 🩺 MedBlocks Patient-management-system
 
-A frontend-only patient registration app using React + PGlite. Runs entirely in the browser with offline and multi-tab support.
+A patient management app using React + PGlite. Runs entirely in the browser and multi-tab support.
 
 ## 🚀 Live Demo
-👉 https://your-deployment.vercel.app
+👉 https://patient-system-alpha.vercel.app/
 
 ## ✅ Features
 - Patient registration form
@@ -23,6 +23,3 @@ git clone https://github.com/your-username/patient-app.git
 cd patient-app
 npm install
 npm run dev
-
-
-
