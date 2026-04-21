@@ -1,4 +1,4 @@
-# 🩺 MedBlocks Patient-management-system
+#  Patient-management-system
 
 A patient management app using React + PGlite. Runs entirely in the browser and multi-tab support.
 
